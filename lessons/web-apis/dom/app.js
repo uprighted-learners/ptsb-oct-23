@@ -1,4 +1,4 @@
-/* 
+/*
     ? Document Object Model (DOM)
     * an object comprising the structure and content of an .html file
 
@@ -18,9 +18,9 @@
 */
 
 // ? Displays entire document object
-console.log(document)
+console.log(document);
 
-/* 
+/*
     ? Window vs Document vs Navigator vs History Objects
     * document -> outlines the file rendered
     * window -> handles browser-specific functions
@@ -28,23 +28,23 @@ console.log(document)
     * history -> handles browser session history
 */
 
-console.log(navigator.language)
-console.log(history.state)
-console.log(window.fullScreen)
+console.log(navigator.language);
+console.log(history.state);
+console.log(window.fullScreen);
 
 // ? Creating our first element using DOM
 
 // * 1. use .createElement method on a document object & pass your element argument of choice
-let h1 = document.createElement("h1")
-console.log(h1)
+let h1 = document.createElement('h1');
+console.log(h1);
 
 // * 2. modify .textContent property to change rendered text value
-h1.textContent = "Document Object Model Lesson"
+h1.textContent = 'Document Object Model Lesson';
 
 // * 3. append the element we created & modified (child) to its parent element
-document.body.appendChild(h1)
+document.body.appendChild(h1);
 
-/* 
+/*
     ? Accessing elements using DOM
     * Elements can be accessed several different ways. Most common are:
     * getElementById()
@@ -54,15 +54,15 @@ document.body.appendChild(h1)
     * querySelectorAll() [NodeList]
 */
 
-/* 
+/*
     ? getElementById()
     * returns the first instance of an id element
 */
 
-const ulToDo = document.getElementById("ulToDo")
-console.log(ulToDo)
+const ulToDo = document.getElementById('ulToDo');
+console.log(ulToDo);
 
-/* 
+/*
     ? getElementsByClassName()
     * returns an HTML Collection of class instances
     * array-like object (cannot use array methods)
@@ -70,30 +70,30 @@ console.log(ulToDo)
     * can be looped through
 */
 
-const listItem = document.getElementsByClassName("listItem")
-console.log(listItem)
+const listItem = document.getElementsByClassName('listItem');
+console.log(listItem);
 
 // Accessing an instance of class list
 // listItem[0].style.color = "rebeccapurple"
 
 // ulToDo.style.color = "blue"
 for (i of listItem) {
-    i.style.color = "rebeccapurple"
+  i.style.color = 'rebeccapurple';
 }
 
-/* 
+/*
     ? .getElementsByTagName()
     * just like above but for elements
 */
 
-const allLargeHeaders = document.getElementsByTagName("h1")
-console.log(allLargeHeaders)
+const allLargeHeaders = document.getElementsByTagName('h1');
+console.log(allLargeHeaders);
 
 for (i of allLargeHeaders) {
-    i.style.color = "#4287f5"
+  i.style.color = '#4287f5';
 }
 
-/* 
+/*
     ? .querySelector()
     * return the first instance of an element
     * access using tag name, id, and class names
@@ -101,50 +101,48 @@ for (i of allLargeHeaders) {
     * ex: "nav" for element; ".nav" for class; "#nav" for id
 */
 
-const listItemsByQuerySelector = document.querySelector(".listItem")
-console.log(listItemsByQuerySelector) // ! returns first instance ONLY
+const listItemsByQuerySelector = document.querySelector('.listItem');
+console.log(listItemsByQuerySelector); // ! returns first instance ONLY
 
-/* 
+/*
     ? .querySelectorAll()
     * returns a NodeList of all instances of a class, id, or element(s)
     * allows the use of array methods to iterate over
 */
 
-const listItemsByQuerySelectorAll = document.querySelectorAll(".listItem")
-console.log(listItemsByQuerySelectorAll)
+const listItemsByQuerySelectorAll = document.querySelectorAll('.listItem');
+console.log(listItemsByQuerySelectorAll);
 
-/* 
-    ! Challenge
+/*
+    ! Challenge #1
     * Create an instance of a listItem that renders "Clean bedroom"
     * Change its color to blue
     * Append to the bottom of our list
 */
 
-const li = document.createElement("li")
-li.textContent = "Clean bedroom"
-li.className = "listItem"
-ulToDo.appendChild(li)
+const li = document.createElement('li');
+li.textContent = 'Clean bedroom';
+li.className = 'listItem';
+ulToDo.appendChild(li);
 
-console.log("----------------------------------------")
-
-/* 
+/*
     ? HTMLCollection vs NodeList
-    
+
     * HTMLCollection returns a list that is live
     * Live lists DO show newly created elements even after their lookup
-    
+
     * NodeList returns a static list of elements
     * NodeLists DO NOT show newly created elements
 */
 
-const htmlCollection = document.getElementsByClassName("listItem")
-const nodeList = document.querySelectorAll(".listItem")
-console.log("HTMLCollection", htmlCollection, "NodeList", nodeList)
+const htmlCollection = document.getElementsByClassName('listItem');
+const nodeList = document.querySelectorAll('.listItem');
+console.log('HTMLCollection', htmlCollection, 'NodeList', nodeList);
 
-const testItem = document.createElement("li")
-testItem.textContent = "Test Item"
-testItem.className = "listItem"
-ulToDo.appendChild(testItem)
+const testItem = document.createElement('li');
+testItem.textContent = 'Test Item';
+testItem.className = 'listItem';
+ulToDo.appendChild(testItem);
 
 // ? Last element isn't red because NodeList is static
 // for (i of nodeList) {
@@ -153,5 +151,6 @@ ulToDo.appendChild(testItem)
 
 // ? All elements are red because HTMLCollection is live
 for (i of htmlCollection) {
-    i.style.color = "red"
+  i.style.color = 'red';
 }
+
