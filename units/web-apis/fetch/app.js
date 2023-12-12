@@ -1,4 +1,4 @@
-/* 
+/*
     ? Application Programming Interface (API)
     * a way for a client to communicate with the server
     * allows for HTTP request and response lifecycle
@@ -17,12 +17,12 @@
             * contains payload
     */
 
-/* 
+/*
     ? URL or URI
     * Uniform Resource Locator (Identifier)
     * address that allows us to access web resources
     * DNS (domain name) server resolves the url string into an IP address
-    
+
     * http:// || https:// --> protocol type
     * www.google.com --> domain
         * can have subdomains (ex: gmail.google.com)
@@ -42,11 +42,11 @@
         * ex: #footer will take you to an element with that id attr value
 */
 
-/* 
+/*
     ? Fetch API
     * fetch is an asynchronous function
     * we don't know how long request-response lifecycle will take
-    
+
     * 1. Fetch your resource and return promise
     * 2. Use .then resolver to catch fetch's return and assign to a parameter
     * 3. The parameter is part of a Response interface object
@@ -57,32 +57,31 @@
     * 8. Catch the return as a data parameter
 */
 
-const url = "hxttps://pokeapi.co/api/v2/pokemon/"
-
+const url = 'https://pokeapi.co/api/v2/pokemon/';
 
 fetch(url)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        data.results.forEach(pokemon => {
-            let h3 = document.createElement("h3")
-            h3.textContent = pokemon.name
-            document.body.appendChild(h3)
-        })
-    })
-    .catch(err => console.log(err))
-    .then(() => console.log("Some code that runs after .catch() error handling"))
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+    data.results.forEach((pokemon) => {
+      let h3 = document.createElement('h3');
+      h3.textContent = pokemon.name;
+      document.body.appendChild(h3);
+    });
+  })
+  .catch((err) => console.log(err))
+  .then(() => console.log('Some code that runs after .catch() error handling'));
 
 // ? Async Function Fetch
 
 async function getData() {
-    try {
-        const res = await fetch(`${url}pikachu`)
-        const data = await res.json()
-        console.log(data)
-    } catch(err) {
-        console.log(err)
-    }
+  try {
+    const res = await fetch(`${url}pikachu`);
+    const data = await res.json();
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 // getData()

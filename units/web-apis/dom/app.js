@@ -114,16 +114,13 @@ const listItemsByQuerySelectorAll = document.querySelectorAll('.listItem');
 console.log(listItemsByQuerySelectorAll);
 
 /*
-    ! Challenge #1
+    ! Challenge
     * Create an instance of a listItem that renders "Clean bedroom"
     * Change its color to blue
     * Append to the bottom of our list
 */
 
-const li = document.createElement('li');
-li.textContent = 'Clean bedroom';
-li.className = 'listItem';
-ulToDo.appendChild(li);
+// ! Add your answer here
 
 /*
     ? HTMLCollection vs NodeList
@@ -153,4 +150,3 @@ ulToDo.appendChild(testItem);
 for (i of htmlCollection) {
   i.style.color = 'red';
 }
-
