@@ -24,7 +24,7 @@ Below you'll find a mini lesson on how I replaced the numbered comments to an ac
 
 How can I solve this without manually doing it? I can use both find/replace along w/ regex to make a singular global replacement this fle. Regular expressions (aka regex) is an expression library that provides tooling to search strings and eventually be paired w/ other tools to manipulate them. This has helped me immensely in my career including non-code things!
 
-Seriously - it's saved my day many times. One time is fixed a major bug causing our customer Facebook from continuing to lose major amounts of money. Another time there was days of work revising database information requested by a product owner that was otherwise a manual process.
+Seriously - it's saved my day many times. One time it fixed a major bug causing our customer Facebook from losing millions of dollars. Another time there was days of work asked of me by a product owner revising database information that was otherwise a manual process.
 
 ---
 
