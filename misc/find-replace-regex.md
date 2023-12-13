@@ -1,8 +1,9 @@
 ## VS Code Find & Replace + Regex
 
 **Resources:**
-- Regular Expressions (Regex) - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions
-- VS Code/Visual Studio Find & Replace - https://learn.microsoft.com/en-us/visualstudio/ide/finding-and-replacing-text?view=vs-2022&viewFallbackFrom=vs-2023
+- Regular Expressions (Regex) - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- VS Code/Visual Studio Find & Replace - [https://learn.microsoft.com/en-us/visualstudio/ide/finding-and-replacing-text?view=vs-2022&viewFallbackFrom=vs-2023](https://learn.microsoft.com/en-us/visualstudio/ide/finding-and-replacing-text?view=vs-2022&viewFallbackFrom=vs-2023)
+- Learn, Write and Test Regex - [https://regex101.com](https://regex101.com)
 
 ---
 
