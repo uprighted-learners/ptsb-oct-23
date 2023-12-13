@@ -24,7 +24,7 @@
 //
 // ? 9) Add a click interaction function to your change button. It should accept a number (index) and hex code color. When called it updates the corresponding item with the passed hex color.
 //
-// ? 10) Write an additional get or query selector that loops over each TODO in the list and sets them all to the same color.
+// ? 10) Write an additional get or query selector that loops over each TODO in the list and sets them all to the same color and updates the text. Find a way to make the text the same but with something unique that identifies it changed via the loop.
 //
 //
 //
