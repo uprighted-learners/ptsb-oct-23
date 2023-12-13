@@ -10,6 +10,8 @@ VS Code, Microsoft Word, and a variety of code/word editors off the ability to f
 
 In this example I wrote the DOM challenge/homework in Javascript using comments initially. Code comments in most editor themes are displayed as grey reducing readability. In order to provide an improved & inclusive reading experience for you as developers I am reproducing an additional [Markdown](https://www.markdownguide.org/cheat-sheet/). Consider this when you think about the real world when producing your code for yourself and others. The experience you provide matters. Think about how you can make it as easy as possible on both of you how lessen the work to read and understand what is done or being asked of you.
 
+This is about providing you, the learner, an easier way to read and understand the assignment. Both files provide the same information but one is much easier on the eyes. :)
+
 Below you'll find a mini lesson on how I replaced the numbered comments to an acceptable format Markdown will render. See `units/web-apis/dom/challenge.js`. I duplicated this file and changed the extension from `.js` to `.md`. The find/replace was performed on the newly created Markdown file.
 
 **JS Comments Version**: 1) Some step, 2) Some step
