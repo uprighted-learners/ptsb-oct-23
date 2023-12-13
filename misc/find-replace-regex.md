@@ -30,7 +30,7 @@ Seriously - it's saved my day many times. One time it fixed a major bug causing 
 
 ### What I Did
 
-Deciding to create a Markdown (.md) file I needed my quick solution to save myself some the manual change pain. Knowing that I wrote it consistently as `{num}) ` (make sure to note the paren and space) I could capture it with regex and then use the replace feature to update it all at once.
+Deciding to create a Markdown (.md) file I needed my quick solution to save myself some the manual change pain. Knowing that I wrote it consistently as "1) Some step" (`{num}) `) (make sure to note the paren and space) I could capture it with regex and then use the replace feature to update it all at once.
 
 **Steps**
 - Identify and confirm the previously written syntax
