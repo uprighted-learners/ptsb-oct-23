@@ -15,32 +15,7 @@ const listInput = document.getElementById('listInput');
  * 4. We console.log it's .value property
  */
 // listInput.addEventListener("keyup", event => console.log(event.target.value))
-
-// TODO: access the list
-// TODO: access the input AND the button (input for value btn for clicking)
-// TODO: when the button is clicked
-// TODO: create a new element
-// TODO: update the textContent of the new element to come from the value of the input
-// TODO: append the new element to the list
-
-const btn = document.getElementById('submit');
-const ulToDo = document.getElementById('ulToDo');
-
-btn.addEventListener('click', (event) => {
-  // 1. Access .value of listInput when this button is clicked
-  // Instead you can use target property of the event object and peruse around
-  console.log(listInput.value);
-  console.log(event.target.previousElementSibling.value);
-  console.log(event);
-  // 2. Create a list item element
-  const li = document.createElement('li');
-  // 3. Append the value of listInput to li's textContent property
-  li.textContent = event.target.previousElementSibling.value;
-  li.className = 'listItem';
-  // 4. Append newly created element to the parent
-  ulToDo.appendChild(li);
-  event.target.previousElementSibling.value = '';
-});
+//
 
 /*
     ! Challenge

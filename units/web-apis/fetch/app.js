@@ -56,32 +56,3 @@
     * 7. Resolve the epromise with one more .then() resolver
     * 8. Catch the return as a data parameter
 */
-
-const url = 'https://pokeapi.co/api/v2/pokemon/';
-
-fetch(url)
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data);
-    data.results.forEach((pokemon) => {
-      let h3 = document.createElement('h3');
-      h3.textContent = pokemon.name;
-      document.body.appendChild(h3);
-    });
-  })
-  .catch((err) => console.log(err))
-  .then(() => console.log('Some code that runs after .catch() error handling'));
-
-// ? Async Function Fetch
-
-async function getData() {
-  try {
-    const res = await fetch(`${url}pikachu`);
-    const data = await res.json();
-    console.log(data);
-  } catch (err) {
-    console.log(err);
-  }
-}
-
-// getData()
