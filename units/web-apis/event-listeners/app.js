@@ -2,7 +2,7 @@
     ? Event Listeners
     * allow us to execute a callback fx when an event occurs
     * .addEventListener() takes an event and fires a callback
-    * event - a string of what happens
+    * event - a string for the event type
     * callback = fx that is triggered immediately after event occurs
 */
 
