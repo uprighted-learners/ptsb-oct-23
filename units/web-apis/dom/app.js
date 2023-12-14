@@ -39,10 +39,13 @@ let h1 = document.createElement('h1');
 console.log(h1);
 
 // * 2. modify .textContent property to change rendered text value
-h1.textContent = 'Document Object Model Lesson';
+h1.textContent = 'Ralf is my dog, he sheds a lot';
+h1.style.color = 'red';
 
 // * 3. append the element we created & modified (child) to its parent element
 document.body.appendChild(h1);
+
+console.log(document.getElementsByTagName('li'));
 
 /*
     ? Accessing elements using DOM
@@ -58,9 +61,9 @@ document.body.appendChild(h1);
     ? getElementById()
     * returns the first instance of an id element
 */
+document.getElementById('listTitle');
 
-const ulToDo = document.getElementById('ulToDo');
-console.log(ulToDo);
+//
 
 /*
     ? getElementsByClassName()
@@ -69,29 +72,21 @@ console.log(ulToDo);
     * allows access to index, length, etc.
     * can be looped through
 */
+document.getElementsByClassName('listItem');
 
-const listItem = document.getElementsByClassName('listItem');
-console.log(listItem);
+//
 
 // Accessing an instance of class list
 // listItem[0].style.color = "rebeccapurple"
 
 // ulToDo.style.color = "blue"
-for (i of listItem) {
-  i.style.color = 'rebeccapurple';
-}
-
+//
 /*
     ? .getElementsByTagName()
     * just like above but for elements
 */
 
-const allLargeHeaders = document.getElementsByTagName('h1');
-console.log(allLargeHeaders);
-
-for (i of allLargeHeaders) {
-  i.style.color = '#4287f5';
-}
+document.getElementByTagName('li');
 
 /*
     ? .querySelector()
@@ -101,8 +96,7 @@ for (i of allLargeHeaders) {
     * ex: "nav" for element; ".nav" for class; "#nav" for id
 */
 
-const listItemsByQuerySelector = document.querySelector('.listItem');
-console.log(listItemsByQuerySelector); // ! returns first instance ONLY
+//
 
 /*
     ? .querySelectorAll()
@@ -110,14 +104,14 @@ console.log(listItemsByQuerySelector); // ! returns first instance ONLY
     * allows the use of array methods to iterate over
 */
 
-const listItemsByQuerySelectorAll = document.querySelectorAll('.listItem');
-console.log(listItemsByQuerySelectorAll);
+//
 
 /*
     ! Challenge
-    * Create an instance of a listItem that renders "Clean bedroom"
-    * Change its color to blue
-    * Append to the bottom of our list
+    * Add a list item
+    * Remove the 2nd item from the list
+    * Change the add item button styles using the ID and text size 42px (use JS)
+    * Extra Credit: Remove inline styles on add item, add a class, and style it in the separate CSS file
 */
 
 // ! Add your answer here
@@ -132,14 +126,7 @@ console.log(listItemsByQuerySelectorAll);
     * NodeLists DO NOT show newly created elements
 */
 
-const htmlCollection = document.getElementsByClassName('listItem');
-const nodeList = document.querySelectorAll('.listItem');
-console.log('HTMLCollection', htmlCollection, 'NodeList', nodeList);
-
-const testItem = document.createElement('li');
-testItem.textContent = 'Test Item';
-testItem.className = 'listItem';
-ulToDo.appendChild(testItem);
+//
 
 // ? Last element isn't red because NodeList is static
 // for (i of nodeList) {
@@ -147,6 +134,4 @@ ulToDo.appendChild(testItem);
 // }
 
 // ? All elements are red because HTMLCollection is live
-for (i of htmlCollection) {
-  i.style.color = 'red';
-}
+//
