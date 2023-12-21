@@ -12,7 +12,7 @@ Connect with me on [LinkedIn](https://linkedin.com/in/dandigangi) and stop by [m
 
 ## Expectations
 
-You will find very quickly that I am extremely passionate towards engineering and education. I'll give you 120% but we expect the same from you. This means working hard to learn and enforce what you will be taught.
+You will find very quickly that I am extremely passionate towards engineering and education. I'll give you 120% but we expect the same from you. This means working hard to learn and enforce what you will be taught. Don't spend the money and not take advantage of what you have available.
 
 The time we spend is only part of the story that will enable your ability to become an engineer and get your first job. You **must** spend time outside of class to truly build your foundation. 20-25 hour per week minimum (including the weekly 3x three hour lessons) is highly suggested.
 
@@ -22,7 +22,7 @@ Additionally, you must engage and contribute in class. This means speaking up wh
 
 ## Lessons
 
-We meet Monday, Wednesday, and Thursday from 6-9pm EST. Units comprise of 1-3 concepts per day and are grouped into units. Units typically take 1-2 weeks. During lessons there is a lecture including slides, live code-alongs, challenges, and collaboration sessions with other students.
+We meet Monday, Wednesday, and Thursday from 6-9pm EST. Units comprise of 1-3 concepts per day and are grouped into units. Units typically take 1-2 weeks. During lessons there is a lecture including slides, live code-alongs, challenges, and collaboration sessions with other students. We take two 10-15 minute breaks per lesson.
 
 ### Units
 #### **1**: HTML & CSS
@@ -66,6 +66,10 @@ Not feeling challenged? Come see me.
 ## Study Halls
 
 Study halls will be available (usually) on Friday 6-9pm EST. We offer additional ad-hoc study halls throughout the week. I'm also available for private and small group tutoring. Open invite to everyone.
+
+## Other
+
+I'll be providing a variety of misc. lessons ad-hoc, recordings, and during extra time in class. Upright provides the core education to enable you to build your foundation. My extra lessons give you the "what they don't teach in bootcamp" content. Requests are welcome. I can also be found for lunch and learns + guest speaking which is provided to Upright learners only.
 
 ## Useful Links
 - [Upright Leaner Docs & Resources](https://docs.google.com/spreadsheets/d/1AaCzerodp1Rqa0684xE4C1UuFhF-fW3dANEuNho8sjs/edit#gid=0)
