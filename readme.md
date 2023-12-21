@@ -18,9 +18,7 @@ Connect with me on [LinkedIn](https://linkedin.com/in/dandigangi) and stop by [m
 
 You will find very quickly that I am extremely passionate towards engineering and education. I'll give you 120% but we expect the same from you. This means working hard to learn and enforce what you will be taught. Don't spend the money and not take advantage of what you have available.
 
-The time we spend is only part of the story that will enable your ability to become an engineer and get your first job. You **must** spend time outside of class to truly build your foundation. 20-25 hour per week minimum (including the weekly 3x three hour lessons) is highly suggested.
-
-This program is tough by design. You are entering a new world. Engineering is a great field but it takes work to make it work. Without sounding to arrogant I hope, I promise you will receive more from me as an instructor than any other.
+The time we spend is only part of the story that will enable your ability to become an engineer and get your first job. You **must** spend time outside of class to truly build your foundation. 20-25 hour per week minimum (including the weekly 3x three hour lessons) is highly suggested. This program is tough by design. You are entering a new world. Engineering is a great field but it takes work to make it work.
 
 Additionally, you must engage and contribute in class. This means speaking up when you have questions, answering questions we ask, and making comments. We know it's difficult at time to know what questions to ask but I implore you to push your want to succeed and curiosity to engage. Other expectations/requirements include turning in your labs and projects on time. Make sure to have your video on during lessons on Zoom.
 
