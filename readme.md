@@ -18,31 +18,31 @@ We meet Monday, Wednesday, and Thursday from 6-9pm EST. Each class will cover fr
 #### **Unit 1**: HTML & CSS
 
     Orientation, Terminal/Git, HTML, CSS, CSS Layout, CSS Responsive Design, CSS Grid, Embedding Media
----
+
 #### **Unit 2**: Javascript Fundamentals
 
     Data Types, Variables, Booleans/Logic Gates, Conditionals, Loops, Functions, Scope/Hoisting, Promises/Async, IO
----
+
 #### **Unit 3**: Data Structures
 
     Arrays, Objects, Classes, State Machines, OOP
----
+
 #### **Unit 4**: Web APIs
 
     DOM, Event Listeners, Inherit Events, Query Params, Fetch, Error Handling
----
+
 #### **Unit 5**: Server
 
     Express, Static Files, Forms/Server, Query Params, JSON, Endpoints, Cookies/Session
----
+
 #### **Unit 6**: Databases
 
     MongoDB, Databases, Drivers, Queries, Schemas/Data Modeling, Authentication, Session Validation
----
+
 #### **Unit 7**: React
 
     Intro, Components, State/Props, Lifting State, Hooks, Rendering, Routing
----
+
 #### **Unit 8**: SDLC
     Software Industry, Agile, Estimation, Ticketing, Git, Misc
 
