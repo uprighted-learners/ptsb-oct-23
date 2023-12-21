@@ -10,6 +10,10 @@ Welcome to Upright Education. I'm Dan DiGangi. I'll be your teacher, mentor, and
 
 Connect with me on [LinkedIn](https://linkedin.com/in/dandigangi) and stop by [my website](https://dandigangi.com) to get to know me better. It's never to early to start networking. You can DM me on Discord (*asyncFx*) or email me at [dan@uprighted.com](mailto:dan@uprighted.com) also!
 
+**Teaching Assistants**:
+- [Jahara Clark](https://www.linkedin.com/in/jaharaclark/)
+- [Demaceo Howard](https://www.linkedin.com/in/demaceo/)
+
 ## Expectations
 
 You will find very quickly that I am extremely passionate towards engineering and education. I'll give you 120% but we expect the same from you. This means working hard to learn and enforce what you will be taught. Don't spend the money and not take advantage of what you have available.
