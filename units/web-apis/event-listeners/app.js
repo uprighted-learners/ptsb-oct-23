@@ -1,21 +1,30 @@
-/*
-    ? Event Listeners
-    * allow us to execute a callback fx when an event occurs
-    * .addEventListener() takes an event and fires a callback
-    * event - a string for the event type
-    * callback = fx that is triggered immediately after event occurs
-*/
-
 const listInput = document.getElementById('listInput');
+let currentInputValue;
 
-/*
- * 1. Event listener listens for a key up event
- * 2. We collect it within the event argument
- * 3. We access the target property of the element on which the event listener was placed
- * 4. We console.log it's .value property
- */
-// listInput.addEventListener("keyup", event => console.log(event.target.value))
-//
+listInput.addEventListener('keyup', (evt) => {
+  currentInputValue = evt.target.value;
+  console.log(currentInputValue);
+});
+
+const ulToDo = document.getElementById('ulToDo');
+const addBtn = document.getElementById('add');
+const removeBtn = document.getElementById('remove');
+
+addBtn.addEventListener('click', (evt) => {
+  console.log(evt);
+
+  if (listInput.value === '') {
+    listInput.className = 'error';
+    return false;
+  }
+
+  listInput.classList.remove('error');
+
+  const newItem = document.createElement('li');
+  newItem.textContent = currentInputValue;
+  ulToDo.append(newItem);
+  listInput.value = '';
+});
 
 /*
     ! Challenge

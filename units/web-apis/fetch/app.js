@@ -56,3 +56,46 @@
     * 7. Resolve the epromise with one more .then() resolver
     * 8. Catch the return as a data parameter
 */
+
+// fetch('https://jsonplaceholder.typicode.com/posts/1');
+
+const url = 'https://pokeapi.co/api/v2/pokemon/';
+
+// Request would be "req", Response would be "resp"
+fetch(url)
+  .then((resp) => {
+    return resp.json();
+  })
+  .then((data) => {
+    console.log(data);
+    data.results.forEach((pokemon) => {
+      let h3 = document.createElement('h3');
+      h3.textContent = pokemon.name;
+      document.body.appendChild(h3);
+    });
+  })
+  .catch((err) => {
+    console.log(`im the catch - ${err}`);
+  })
+  .finally(() => {
+    // this always happens at end
+  });
+
+// Async Await
+
+async function getData() {
+  try {
+    const resp = await fetch(url);
+    const data = await resp.json();
+
+    throw new Error('AHHHHH NOOOO');
+
+    data.results.forEach((pokemon) => {
+      let h3 = document.createElement('h3');
+      h3.textContent = pokemon.name;
+      document.body.appendChild(h3);
+    });
+  } catch {}
+}
+
+getData();
