@@ -61,6 +61,12 @@ Each week you will receive multiple labs to improve your skills and enforce the 
 
 Labs are due by the end of the week. Projects you will typically have 1-2 weeks to complete. Challenges will be nested within the lesson files and you should complete them outside of class. You will also find additional extra credit and extra extra credit to further push your skill development.
 
+Not feeling challenged? Come see me.
+
+## Study Halls
+
+Study halls will be available (usually) on Friday 6-9pm EST. We offer additional ad-hoc study halls throughout the week. I'm also available for private and small group tutoring. Open invite to everyone.
+
 ## Useful Links
 - [Upright Leaner Docs & Resources](https://docs.google.com/spreadsheets/d/1AaCzerodp1Rqa0684xE4C1UuFhF-fW3dANEuNho8sjs/edit#gid=0)
 - [Learning Resources & Useful Tools by Dan](https://docs.google.com/spreadsheets/d/1AdjKsEMjw3zezS4bnVrAAY1neh8-QdBm1QKxmWMkxAI/edit#gid=0)
