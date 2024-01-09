@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <title>Node/Express Application</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Login</h1>
+    <h4>Navigation</h4>
+    <ul>
+      <li>
+        <a href="/"
+          ><strong>GET</strong> | Home
+          <pre>/</pre>
+        </a>
+      </li>
+      <li>
+        <a href="/login">
+          <strong>GET</strong> | Login
+          <pre>/login</pre>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          ><strong>POST</strong> | Login
+          <pre>/login?username=USERNAME&password=PASSWORD</pre>
+        </a>
+      </li>
+      <li>
+        <a href="/pokemon/:name">
+          <strong>GET</strong> | Pokemon Pic
+          <pre>/pokemon/charmander</pre>
+        </a>
+      </li>
+    </ul>
+    <hr />
+    <h4>Enter Your Info</h4>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input
+        class="username"
+        id="username"
+        type="text"
+        name="username"
+        value="dandigangi"
+        required
+      /><br />
+      <label for="password">Password</label>
+      <input
+        class="password"
+        id="password"
+        type="password"
+        name="password"
+        value="password"
+        required
+      /><br /><br />
+      <input type="submit" class="submit" value="Submit" />
+    </form>
+
+    <script>
+      const url = new URL(window.location)
+      const form = document.querySelector('#loginForm')
+
+      async function sendData() {
+        const formData = new FormData(form)
+        // ... is a short hand way to loop over objects/arrays (called spread)
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+        const formDataInputs = [...formData.entries()]
+        const bodyData = {}
+
+        console.log(JSON.stringify(formData))
+
+        formDataInputs.forEach((input) => {
+          console.log(input)
+          // url.searchParams.set(key, value)
+          // url.searchParams.set(input[0], input[1])
+          bodyData[input[0]] = input[1]
+        })
+
+        console.log(url.searchParams.toString())
+
+        // const response = await fetch(`/login?${url.searchParams.toString()}`, {
+        //   method: 'POST',
+        // })
+
+        const response = await fetch(`/login`, {
+          method: 'POST',
+          body: JSON.stringify(bodyData),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+
+        const data = await response.json()
+
+        console.log(response)
+        console.log(data)
+
+        if (response.status === 200 && data.success) {
+          setTimeout(() => {
+            // window.location = '/success'
+            console.log('done')
+          }, 3000) // milliseconds is common unit for time (1000ms = 1s)
+        } else {
+          throw new Error()
+        }
+      }
+
+      form.addEventListener('submit', (evt) => {
+        // stopping the default form and browser behavior for forms
+        evt.preventDefault()
+        sendData()
+      })
+    </script>
+  </body>
+</html>
