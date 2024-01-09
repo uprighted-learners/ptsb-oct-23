@@ -45,7 +45,7 @@ app.use((req, res, next) => {
 
 // Custom middleware example - checking user is logged in
 // Misc lesson - handle{FunctionName} is a common naming pattern
-const handleLoginMiddleware = (req, res, next) => {
+const handleLogin = (req, res, next) => {
   console.log('custom middleware route level - check logged or not')
   // Toggle to false to see the middleware redirect to the 404 page
   const isLoggedIn = true
@@ -54,6 +54,7 @@ const handleLoginMiddleware = (req, res, next) => {
   // You might also see something like has{SomeState} which is similar
   if (isLoggedIn) {
     next()
+    return false
   }
 
   // Sends the user to the error page because they are not logged in
@@ -112,8 +113,14 @@ app.get('/success', (req, res) => {
   res.sendFile(createPath('success', 'html'))
 })
 
-app.get('/404', () => {
+app.get('/404', (req, res) => {
   res.sendFile(createPath('404', 'html'))
+})
+
+app.get('/private', handleLogin, (req, res) => {
+  res.send(
+    '<h2>Protected page requiring login, checked by custom middleware handleLogin()</h2>',
+  )
 })
 
 // POST requests typically send information to a server
