@@ -43,6 +43,21 @@
 					"response": []
 				},
 				{
+					"name": "GET Home Page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "GET Login Page",
 					"request": {
 						"method": "GET",
@@ -56,21 +71,6 @@
 							"path": [
 								"login"
 							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET Home Page",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:8080",
-							"host": [
-								"localhost"
-							],
-							"port": "8080"
 						}
 					},
 					"response": []
