@@ -38,7 +38,8 @@
 							"path": [
 								"login"
 							]
-						}
+						},
+						"description": "Sends a valid login to the endpoint and will return a 200 and JSON w/ success boolean."
 					},
 					"response": []
 				},
@@ -53,7 +54,8 @@
 								"localhost"
 							],
 							"port": "8080"
-						}
+						},
+						"description": "Returns the index.html file"
 					},
 					"response": []
 				},
@@ -71,11 +73,13 @@
 							"path": [
 								"login"
 							]
-						}
+						},
+						"description": "Returns the index.html file"
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Request examples for the Node/Express application we built. It will show you a simple GET and POST request. Your server must be running to use these HTTP requests."
 		}
 	]
 }
