@@ -2,7 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "scripts": {
-    "start": "nodemon ./index.js"
+    "start": "npm run build && nodemon ./index.js",
+    "build": "echo 'building your app'",
+    "test": "echo hello",
+    "meow": "echo meow"
   },
   "dependencies": {
     "cors": "^2.8.5",
