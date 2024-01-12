@@ -1,22 +1,26 @@
 require('dotenv').config()
 const path = require('path')
 const express = require('express')
-const { handleErrors } = require('./middleware/errors')
+const { handleAuth, handleErrors } = require('./middleware')
+const { paths } = require('./constants')
+const router = express.Router
 const app = express()
 
 // Middleware
-// TODO
+app.use(express.static(paths.public))
+app.use(handleErrors)
 
-// Routes (pre-Router)
+// Routes
 app.get('/', (req, res) => {
-  res.sendFile('./index.html')
+  res.sendFile(`${paths.public}/index.html`)
 })
 
-// app.use(handleErrors)
+app.get('/cart', (req, res) => {
+  res.sendFile(`${paths.public}/cart.html`)
+})
 
-app.use((err, req, res, next) => {
-  console.error(err.stack)
-  res.status(500).send('Something broke!')
+app.get('/admin', handleAuth, (req, res) => {
+  res.sendFile(`${paths.public}/admin.html`)
 })
 
 app.listen(process.env.SERVER_PORT, (req, res) => {
