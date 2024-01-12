@@ -1,0 +1,85 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.wrapper.header-navigation {
+  background-color: #172660;
+}
+
+.wrapper.header-navigation .container {
+  padding: 30px;
+  width: 232px;
+}
+
+.navigation-links .link {
+  margin-bottom: 18px;
+  padding: 4px;
+  padding-left: 14px;
+  border-radius: 10px;
+}
+
+.navigation-links .link:hover {
+  transform: scale(1.1);
+}
+
+.navigation-links .link.active {
+  background-color: #2a3b83;
+}
+
+.navigation-links .link a {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.wrapper.content .container {
+  padding: 40px;
+}
+
+.customer-header {
+  margin-bottom: 60px;
+}
+
+.customer-header.brand {
+  display: flex;
+}
+
+.customer-header .logo {
+  display: inline-block;
+}
+
+.customer-links {
+  display: flex;
+}
+
+.customer-links .link {
+  margin-right: 15px;
+}
+
+.customer-links:last-child {
+  margin-right: 0;
+}
+
+.products-list {
+  display: flex;
+}
+
+.products-list .main-image {
+  display: inline-block;
+}
+
+.products-list .product {
+  flex: 1 1 150px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
