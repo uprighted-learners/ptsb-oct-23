@@ -1,27 +1,19 @@
 require('dotenv').config()
 const path = require('path')
 const express = require('express')
-const { handleAuth, handleErrors } = require('./middleware')
 const { paths } = require('./constants')
+const routes = require('./routes')
 const router = express.Router
 const app = express()
 
-// Middleware
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 app.use(express.static(paths.public))
-app.use(handleErrors)
 
 // Routes
-app.get('/', (req, res) => {
-  res.sendFile(`${paths.public}/index.html`)
-})
-
-app.get('/cart', (req, res) => {
-  res.sendFile(`${paths.public}/cart.html`)
-})
-
-app.get('/admin', handleAuth, (req, res) => {
-  res.sendFile(`${paths.public}/admin.html`)
-})
+app.use(['/', '/store'], routes.store)
+app.use('/cart', routes.cart)
+app.use('/admin', routes.admin)
 
 app.listen(process.env.SERVER_PORT, (req, res) => {
   console.log(
