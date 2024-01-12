@@ -1,3 +1,10 @@
+// dotenv is a Node package that allows you to load global/environment variables into your applications
+// A simple example (see .env file) is the port, it is loaded into process.env which is globally available in Node
+// This line must come first (although there is other styles) to load it as soon as possible
+// This is now available in Node 20+ (although it works different and not many apps use it yet)
+// Check the app.listen code at the bottom of the file to see how it's used
+require('dotenv').config()
+
 // Express = Node framework for building server applications
 // You will likely be on version 4.x.x but 5 is (supposedly) coming
 // Make sure when you read documentation you are reading the correct version
@@ -181,6 +188,6 @@ app.get('/pokemon/:name', (req, res) => {
   }
 })
 
-app.listen(SERVER_PORT, () => {
-  console.log(`Server started on localhost:${SERVER_PORT}`)
+app.listen(process.env.SERVER_PORT, () => {
+  console.log(`Server started on localhost:${process.env.SERVER_PORT}`)
 })
