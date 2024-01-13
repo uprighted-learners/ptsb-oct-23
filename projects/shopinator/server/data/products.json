@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 13 Pro",
+    "price": 1099.99,
+    "description": "The iPhone 13 Pro redefines smartphone photography with its advanced camera system, ProMotion display, and powerful A15 Bionic chip. Experience innovation at your fingertips.",
+    "category": "Electronics",
+    "rating": 4.8
+  },
+  {
+    "id": 2,
+    "name": "Levi's Classic Trucker Jacket",
+    "price": 79.99,
+    "description": "A timeless wardrobe staple, the Levi's Classic Trucker Jacket offers iconic style and comfort. Crafted with durable denim, it's perfect for any casual occasion.",
+    "category": "Clothing",
+    "rating": 4.5
+  },
+  {
+    "id": 3,
+    "name": "Breville Barista Express Espresso Machine",
+    "price": 599.99,
+    "description": "Elevate your coffee experience with the Breville Barista Express Espresso Machine. Create barista-quality espresso at home with its integrated conical burr grinder and precise control settings.",
+    "category": "Home & Kitchen",
+    "rating": 4.7
+  },
+  {
+    "id": 4,
+    "name": "Osprey Atmos AG 65 Backpack",
+    "price": 289.99,
+    "description": "Designed for avid hikers, the Osprey Atmos AG 65 Backpack offers exceptional comfort and ventilation. With anti-gravity suspension, it's perfect for long treks into the wilderness.",
+    "category": "Sports & Outdoors",
+    "rating": 4.9
+  },
+  {
+    "id": 5,
+    "name": "Estée Lauder Advanced Night Repair Serum",
+    "price": 99.99,
+    "description": "Revitalize your skin with Estée Lauder's Advanced Night Repair Serum. This cult-favorite serum hydrates, repairs, and provides a radiant, youthful complexion.",
+    "category": "Beauty & Personal Care",
+    "rating": 4.6
+  },
+  {
+    "id": 6,
+    "name": "Osmo - Genius Starter Kit for iPad",
+    "price": 99.99,
+    "description": "Fuel creativity and learning with the Osmo Genius Starter Kit for iPad. Combining physical play with interactive apps, it's an educational delight for kids.",
+    "category": "Toys & Games",
+    "rating": 4.3
+  },
+  {
+    "id": 7,
+    "name": "The Silent Patient by Alex Michaelides",
+    "price": 15.99,
+    "description": "Dive into a psychological thriller with 'The Silent Patient' by Alex Michaelides. A gripping novel that keeps you guessing until the very end.",
+    "category": "Books",
+    "rating": 4.4
+  },
+  {
+    "id": 8,
+    "name": "Article Sven Charme Tan Sofa",
+    "price": 1899.99,
+    "description": "Experience luxury with the Article Sven Charme Tan Sofa. Crafted with top-grain leather and a stylish design, it's the perfect centerpiece for your living room.",
+    "category": "Furniture",
+    "rating": 4.8
+  },
+  {
+    "id": 9,
+    "name": "Michelin Pilot Sport 4S Tires",
+    "price": 229.99,
+    "description": "Achieve superior performance with Michelin Pilot Sport 4S Tires. Engineered for sports cars, these tires deliver exceptional grip, responsiveness, and long-lasting tread life.",
+    "category": "Automotive",
+    "rating": 4.7
+  },
+  {
+    "id": 10,
+    "name": "Fitbit Charge 5 Fitness and Activity Tracker",
+    "price": 179.99,
+    "description": "Track your health and fitness with the Fitbit Charge 5. With advanced health metrics, built-in GPS, and a sleek design, it's your perfect companion for an active lifestyle.",
+    "category": "Health & Wellness",
+    "rating": 4.5
+  }
+]
