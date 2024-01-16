@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Smartphone",
+    "price": 699.99,
+    "category": "Electronics"
+  },
+  {
+    "id": 2,
+    "name": "Running Shoes",
+    "price": 79.99,
+    "category": "Footwear"
+  },
+  {
+    "id": 3,
+    "name": "Coffee Maker",
+    "price": 129.95,
+    "category": "Home Appliances"
+  },
+  {
+    "id": 4,
+    "name": "Laptop",
+    "price": 1099.99,
+    "category": "Electronics"
+  },
+  {
+    "id": 5,
+    "name": "Winter Jacket",
+    "price": 149.99,
+    "category": "Clothing"
+  }
+]

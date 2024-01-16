@@ -3,6 +3,7 @@
   "repository": "git@github.com:burlingtoncodeacademy-students/ptsb-oct-23.git",
   "author": "Dan DiGangi <dan@uprighted.com>",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1"
   }
 }

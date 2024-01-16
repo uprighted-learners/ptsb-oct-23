@@ -1,0 +1,19 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-size: 32px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.loader {
+  display: none;
+  background-color: #423cb3;
+  padding: 10px;
+  color: #fff;
+  border: 1px solid #000;
+  margin: 0;
+}
