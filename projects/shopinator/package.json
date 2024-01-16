@@ -1,0 +1,13 @@
+{
+  "name": "shopinator",
+  "scripts": {
+    "start": "nodemon ./server/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
