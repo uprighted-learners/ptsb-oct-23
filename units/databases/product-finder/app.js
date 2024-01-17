@@ -6,6 +6,7 @@ let fetchCount = 0
 // The pattern arose from a JS library that changed the internet once upon a time
 // https://jquery.com
 const $loader = document.querySelector('.loader')
+const $error = document.querySelector('.error')
 const $fetchCount = document.querySelector('.fetch-count')
 const $productList = document.querySelector('.product-list')
 const $btnGetProducts = document.querySelector('.btn-get-products')
@@ -19,21 +20,24 @@ $btnGetProductById.addEventListener('click', () => getProductById())
 async function getProducts() {
   setLoading(true)
 
-  const response = await fetch('/products', {
-    method: 'POST',
-  })
-  const products = await response.json()
+  try {
+    const response = await fetch('/products', {
+      method: 'POST',
+    })
+    const products = await response.json()
 
-  // HTML Updates/Output
-  // Fake delay
-  setTimeout(() => {
-    setLoading(false)
-    setFetchCount()
+    // Fake delay to show loading state
+    setTimeout(() => {
+      setLoading(false)
+      setFetchCount()
 
-    let listHtml = ''
-    products.forEach((product) => (listHtml += `<li>${product.name}</li>`))
-    $productList.innerHTML = listHtml
-  }, 3000)
+      let listHtml = ''
+      products.forEach((product) => (listHtml += `<li>${product.name}</li>`))
+      $productList.innerHTML = listHtml
+    }, 3000)
+  } catch (err) {
+    setError()
+  }
 }
 
 // Fetch product by ID
@@ -41,19 +45,27 @@ async function getProductById() {
   setLoading(true)
 
   const productIdToSearch = $formProductId.value
-  const response = await fetch(`/products?id=${productIdToSearch}`, {
-    method: 'POST',
-  })
-  const product = await response.json()
 
-  // HTML Updates/Output
-  // Fake delay
-  setTimeout(() => {
-    setLoading(false)
-    setFetchCount()
-    $productList.innerHTML = `<li>${product.name}</li>`
-  }, 3000)
+  try {
+    const response = await fetch(`/products?id=${productIdToSearch}`, {
+      method: 'POST',
+    })
+    const product = await response.json()
+
+    // Fake delay to show loading state
+    setTimeout(() => {
+      setLoading(false)
+      setFetchCount()
+      $productList.innerHTML = `<li>${product.name}</li>`
+    }, 3000)
+  } catch (err) {
+    setError()
+  }
 }
+
+// Challenge
+// Refactor the get product and get product by ID functions to a single function
+// Extract repeated code into reusable functions if applicable similar to the below
 
 // Increment the fetch count (regardless of error)
 function setFetchCount() {
@@ -62,8 +74,8 @@ function setFetchCount() {
 }
 
 // Loading state and disable things so they can't keep re-requesting
-function setLoading(loadingState) {
-  isLoading = loadingState
+function setLoading(isLoading) {
+  setError(false)
 
   if (isLoading) {
     $loader.style.display = 'inline-block'
@@ -74,4 +86,9 @@ function setLoading(loadingState) {
     $btnGetProducts.disabled = false
     $btnGetProductById.disabled = false
   }
+}
+
+function setError(isDisplayed) {
+  setLoading(false)
+  $error.style.display = 'inline-block'
 }

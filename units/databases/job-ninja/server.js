@@ -3,17 +3,19 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 
-app.use(cors())
+const PORT = process.env.PORT || 8080
+const HOST = process.env.HOST
+const DB_URL = process.env.DB_URL
+
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.use(cors())
 app.use(express.static(__dirname))
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
-app.listen(process.env.SERVER_PORT, (req, res) => {
-  console.log(
-    `starting server at ${process.env.SERVER_HOST}:${process.env.SERVER_PORT}`,
-  )
+app.listen(PORT, (req, res) => {
+  console.log(`starting server at ${HOST}:${DB_URL}`)
 })

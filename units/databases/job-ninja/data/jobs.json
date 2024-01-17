@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Senior Software Engineer",
+    "company_id": 1,
+    "salary_min": 90000,
+    "salary_max": 130000
+  },
+  {
+    "id": 2,
+    "title": "Software Development Manager",
+    "company_id": 2,
+    "salary_min": 100000,
+    "salary_max": 140000
+  },
+  {
+    "id": 3,
+    "title": "Backend Software Engineer",
+    "company_id": 3,
+    "salary_min": 85000,
+    "salary_max": 120000
+  },
+  {
+    "id": 4,
+    "title": "Machine Learning Engineer",
+    "company_id": 4,
+    "salary_min": 95000,
+    "salary_max": 135000
+  },
+  {
+    "id": 5,
+    "title": "Frontend Software Developer",
+    "company_id": 5,
+    "salary_min": 88000,
+    "salary_max": 125000
+  },
+  {
+    "id": 6,
+    "title": "Software Quality Assurance Analyst",
+    "company_id": 6,
+    "salary_min": 80000,
+    "salary_max": 110000
+  }
+]

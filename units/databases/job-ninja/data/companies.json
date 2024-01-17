@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Google Inc.",
+    "industry": "Technology",
+    "location": "Mountain View, CA"
+  },
+  {
+    "id": 2,
+    "title": "JPMorgan Chase & Co.",
+    "industry": "Finance",
+    "location": "New York, NY"
+  },
+  {
+    "id": 3,
+    "title": "Boeing Company",
+    "industry": "Manufacturing",
+    "location": "Chicago, IL"
+  },
+  {
+    "id": 4,
+    "title": "Microsoft Corporation",
+    "industry": "Information Technology",
+    "location": "Redmond, WA"
+  },
+  {
+    "id": 5,
+    "title": "General Motors Company",
+    "industry": "Automotive",
+    "location": "Detroit, MI"
+  },
+  {
+    "id": 6,
+    "title": "Massachusetts General Hospital",
+    "industry": "Healthcare",
+    "location": "Boston, MA"
+  }
+]
