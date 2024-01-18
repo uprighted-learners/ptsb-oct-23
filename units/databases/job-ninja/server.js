@@ -1,3 +1,6 @@
+// Learn MongoDB CRUD
+// https://www.mongodb.com/docs/manual/crud/
+
 require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
