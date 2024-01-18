@@ -1,0 +1,50 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  font-family: sans-serif;
+  font-size: 28px;
+  color: #fff;
+  margin: 0;
+  padding: 70px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+button {
+  font-size: 28px;
+}
+
+.page-title {
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #fff;
+}
+
+.loader {
+  display: none;
+  background-color: purple;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+
+.loader.show {
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+}
+
+.container > div {
+  margin-right: 350px;
+}
