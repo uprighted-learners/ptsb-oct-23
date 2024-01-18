@@ -3,8 +3,8 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 
-const PORT = process.env.PORT || 8080
-const HOST = process.env.HOST
+const PORT = process.env.SERVER_PORT || 8080
+const HOST = process.env.SERVER_HOST
 const DB_URL = process.env.DB_URL
 
 app.use(express.urlencoded({ extended: true }))
@@ -17,5 +17,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(PORT, (req, res) => {
-  console.log(`starting server at ${HOST}:${DB_URL}`)
+  console.log(`starting server at ${HOST}:${PORT}`)
 })
