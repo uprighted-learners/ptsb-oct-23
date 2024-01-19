@@ -29,21 +29,82 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
-// POST Add Company Endpoint
-// Fields: id, title, industry, location
-app.post('/company/add', async (req, res) => {
-  const { companies } = req.body
+// GET to retrieve all companies
+app.get('/companies', async (req, res) => {
   const companiesCollection = await getCollection('companies')
+  const { sort } = req.query
+  let companies
+
+  // Using a query param we could initiate a sort if a valid type is given
+  const sortTypes = ['title', 'industry']
+
+  if (sort && sortTypes.includes(sort)) {
+    companies = await companiesCollection
+      .find()
+      // Sort on the passed type in ascending w/ 1 (descending is -1)
+      .sort({ [sort]: 1 })
+      .toArray()
+  } else {
+    companies = await companiesCollection.find().toArray()
+  }
+
+  // I returned a count property imagining a case where the UI needs to display that count
+  // We _could_ count the array on front end or using the array above
+  // But in a real world scenario these databases could be huge and this is faster (let the backend do the lifting!)
+  // If you want to go even faster there is a speedier method named .estimatedDocumentCount()
+  res.status(200).json({ companies, total: companiesCollection.countDocuments })
+})
+
+// POST to add one or many new companies
+app.post('/companies/add', async (req, res) => {
+  const { companies } = req.body
+  const companiesCollection = await companiesToCollection('companies')
+
+  // The spread syntax is a shorthand way in Javascript to loop over iterable objects
+  // Arrays for example are iterable and spread will loop and add all the objects inside of it
+  // This spread example grabs an object containing a key "companies" and value of array with an object for each company
+  // After the spread runs each company object is inserted into the array below wrapping ...companies
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
   const companyList = [...companies]
-
   companiesCollection.insertMany(companyList)
-
-  // Add 10 companies
-  // 5 are successful, 5 fail
 
   res.status(200).json({
     success: true,
     added: companyList.length,
+  })
+})
+
+app.patch('/companies/update', async (req, res) => {
+  const { company } = req.body
+  const companiesCollection = await getCollection('companiesCollection')
+
+  // Use a field to identify/filter down to the records you want to update
+  const filter = { id: company.id }
+
+  // "$set" is an operator used make the updates to specified fields
+  // These are special operators the database needs to know what operation to perform and how
+  const record = { $set: { ...company } }
+
+  // Pass the filter so it knows what to update and then the record is the data for the update
+  const result = await companiesCollection.updateOne(filter, record)
+
+  res.status(200).json({
+    success: true,
+    matched: result.matchedCount,
+    modified: result.modifiedCount,
+  })
+})
+
+app.delete('/companies/delete', async (req, res) => {
+  const { id } = req.body
+  const companiesCollection = await getCollection('companies')
+
+  // Similar to update, identify which record we are deleting
+  const filter = { id }
+  const result = await companiesCollection.deleteOne(filter)
+
+  res.status(200).json({
+    success: true,
   })
 })
 

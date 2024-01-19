@@ -23,10 +23,11 @@ app.get('/companies', async (req, res) => {
   // Open connection to specific collection
   // This is not the data but you now have methods available to query for data
   await client.connect()
-  const collection = await client.db(process.env.DB_APP).collection('companies')
+  const collection = await client.db(process.env.DB_APP)collection('companies')
   const results = await collection.find().toArray()
+
   console.log(results)
-  res.json(results)
+  res.send('done')
 })
 
 app.listen(process.env.SERVER_PORT, (req, res) => {

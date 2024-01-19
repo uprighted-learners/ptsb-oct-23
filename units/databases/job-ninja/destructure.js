@@ -1,3 +1,5 @@
+// Destructuring
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 const user = {
   name: 'Dan',
   age: 34,
