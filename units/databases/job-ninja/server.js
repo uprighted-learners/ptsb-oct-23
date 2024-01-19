@@ -29,6 +29,24 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
+// POST Add Company Endpoint
+// Fields: id, title, industry, location
+app.post('/company/add', async (req, res) => {
+  const { companies } = req.body
+  const companiesCollection = await getCollection('companies')
+  const companyList = [...companies]
+
+  companiesCollection.insertMany(companyList)
+
+  // Add 10 companies
+  // 5 are successful, 5 fail
+
+  res.status(200).json({
+    success: true,
+    added: companyList.length,
+  })
+})
+
 app.listen(process.env.SERVER_PORT, (req, res) => {
   console.log(
     `starting server at ${process.env.SERVER_HOST}:${process.env.SERVER_PORT}`,
