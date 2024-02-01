@@ -10,6 +10,8 @@ function Header(props) {
 
       {/* Here we conditionally render the subtitle if the prop is not undefined */}
       {props.hasSubtitle && <Subtitle subtitle='My First App' />}
+
+      {props.children}
     </header>
   )
 }

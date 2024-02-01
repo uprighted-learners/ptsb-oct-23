@@ -1,3 +1,13 @@
 .App {
   text-align: center;
 }
+
+.loader {
+  background: #910808;
+  color: white;
+  font-weight: 900;
+  text-align: center;
+  display: inline-block;
+  padding: 30px;
+  margin: 0 30px;
+}
