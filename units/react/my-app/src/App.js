@@ -1,38 +1,65 @@
 import './App.css'
-import Header from './Header'
-import Content from './Content/Content'
-import Footer from './Footer'
+import { useState, useEffect } from 'react'
+import Layout from './components/shared/Layout/Layout'
+import Content from './components/shared/Content/Content'
+import Header from './components/shared/Header/Header'
+import CounterLayout from './components/Counter/CounterLayout'
+import Counter from './components/Counter/Counter'
+import ComputedCount from './components/Counter/ComputedCount'
+import Footer from './components/shared/Footer/Footer'
 
-// Fake data that can be used to setup and pass props to other components
-const cats = [
-  { name: 'dog' },
-  { name: 'jesse' },
-  { name: 'steve' },
-  { name: 'munchin' },
+let dbConnected = false
+const dbData = [
+  { name: 'John', role: 'Junior Developer' },
+  { name: 'Mary', role: 'Staff Frontend Engineer' },
+  { name: 'Steve', role: 'Product Group Owner' },
+  { name: 'Jesse', role: 'Meth Cook' },
 ]
 
-// Challenge 1
-// 1) When we console logged there was duplicate logs, why?
-// Answer: your answer here
-
-// Challenge 2
-// 2a) Research React's children feature/concept. Add the resource you used to learn this: LINK HERE
-// 2b) Add a new Layout component
-// 2c) Use the folder pattern you learned and then nest it in an additional "shared" folder
-// 2d) Make the Header, Content, Footer components children of Layout
-// 2d) Add a CSS file in your folder structure and center the layout at 1024px
 function App() {
+  // First example of a hook for managing state
+  // Left is our variable and the right is a function manage changes to it
+  const [count, setCount] = useState(0)
+
+  // Same function as it was in Counter but lifted along w/ state (look up) so we can use it across more components
+  function handleClickCount(num) {
+    setCount(num)
+  }
+
+  // useEffect is a hook that runs on a per render basis
+  // Per React docs: "use this to sync a component with an external system"
+  // My example connects to a fake database
+  useEffect(() => {
+    console.log('database connected')
+    dbConnected = true
+
+    // The passed array are arguments that are watched for changes to tell React if this hook should run
+    // Because we would only connect to say a database for one example once, once its true, this should not happen again
+    // ES Lint will yell about this but it's for an example if you remove the comment below
+  }, [dbConnected]) // eslint-disable-line
+
   return (
     <div className='App'>
-      {/* First example of passing values as props into components */}
-      <Header title='Home' />
+      <Layout>
+        {/* Passing some props in */}
+        <Header pageTitle='Home' hasSubtitle={true} />
 
-      {/* Components are reusable so there is no limit to using them over and over */}
-      <Header title='Contact' subtitle='Subtitle' />
+        {/* Here we passed our fake data object vs a simple string as a prop*/}
+        <Content users={dbData && dbData.length ? dbData : []}>
+          <h3>Counters Sharing Lifted State</h3>
+          <CounterLayout>
+            <Counter count={count} handleClickCount={handleClickCount} />
+            <Counter count={count} handleClickCount={handleClickCount} />
+          </CounterLayout>
+        </Content>
 
-      {/* Here we passed our fake data object vs a simple string */}
-      <Content cats={cats} />
-      <Footer />
+        <div>
+          {/* The next two items show our ability to use not only state on the current component but pass it to ComputedCount for additional operations */}
+          <ComputedCount count={count} />
+        </div>
+
+        <Footer />
+      </Layout>
     </div>
   )
 }

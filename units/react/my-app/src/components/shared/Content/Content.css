@@ -1,0 +1,21 @@
+.user-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.user {
+  color: #fff;
+  font-weight: 900;
+  padding: 10px;
+  margin: 0 10px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
