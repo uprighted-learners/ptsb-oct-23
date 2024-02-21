@@ -12,6 +12,9 @@ import AboutPerson from './AboutPerson'
 // Suggestion: Use this repo to continue going through the documentation/tutorials before you bring it into your projects.
 // Doc: https://reactrouter.com/en/main/start/tutorial
 // Doc: https://reactrouter.com/en/main/route/route#type-declaration (see this for what can be passed into a route or <Route />)
+//
+// Note there are other types of routers including a lower level interface
+// Doc: https://reactrouter.com/en/main/router-components/hash-router
 const router = createBrowserRouter([
   {
     // What path to match on
