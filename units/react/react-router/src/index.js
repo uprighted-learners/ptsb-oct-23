@@ -28,6 +28,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
 
     // Adding nested routes! Matches on /about/:name
+    // These paths cannot be absolute such as /:name because it breaks the mather
     children: [
       {
         path: ':name',
