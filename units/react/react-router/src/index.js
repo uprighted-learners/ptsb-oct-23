@@ -7,6 +7,10 @@ import AboutPage from './AboutPage'
 import ErrorPage from './ErrorPage'
 import AboutPerson from './AboutPerson'
 
+// Main React Router Docs
+// Advise laerning from V6 but it is likely you will encounter V5 at your future jobs
+// Doc: https://reactrouter.com/en/main
+
 // Create a router and pass in routes w/ a path to match on and what component to render for it.
 // Follow this tutorial! There is a lot in there but Setup, Adding a Router, Handling Not Found Errors, Nested Routes, Loading Data, and Data Writes + HTML Forms are the key one sto complete minimum.
 // Suggestion: Use this repo to continue going through the documentation/tutorials before you bring it into your projects.
